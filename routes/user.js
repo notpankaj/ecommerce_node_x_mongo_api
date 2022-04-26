@@ -84,7 +84,7 @@ router.get("/stats", verifyTokenAndAdmin, async (req, res) => {
         },
       },
     ]);
-    res.send(201).json(data);
+    res.status(201).json(data);
   } catch (error) {
     res.status(500).json(error);
   }
